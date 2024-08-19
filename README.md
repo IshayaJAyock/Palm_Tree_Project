@@ -14,6 +14,10 @@ This project fine-tunes the YOLOv8 model on custom object detection data (Palm T
 - `tests/`: Unit tests for the model and utility functions.
 - `requirements.txt`: Python dependencies.
 
+#### Training Ouput
+![Sunset Image](pix/train.png)
+
+
 ## Setup Instructions
 
 1. Clone the repository:
