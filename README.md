@@ -24,7 +24,7 @@ This project fine-tunes the YOLOv8 model on custom object detection data (Palm T
 
    ```bash
    git clone https://github.com/IshayaJAyock/Palm_Tree_Project.git
-   cd PalmTreeProject
+   cd Palm_Tree_Project
    ```
 
 2. Install Requirements
