@@ -1,8 +1,11 @@
 import os
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
 import pandas as pd
 import numpy as np
 import shutil
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'pipelines')))
 
 
 class PrepareData:
@@ -16,8 +19,7 @@ class PrepareData:
     
     def convert_to_yolo_format(self):
         '''
-        This function takes the data source path,the csv file convert it to a yolo format and output it to the out path.
-        args: 
+        This function takes the data source path, the csv file convert it to a yolo format and output it to the out path.
         '''
         if not os.path.exists(self.output_path):
             os.makedirs(self.output_path)

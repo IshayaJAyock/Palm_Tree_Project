@@ -1,22 +1,32 @@
 import os
 import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'pipelines')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
 from pathlib import Path
-from src.move_text_files import MoveTextFiles
-from src.prepare_data_2 import PrepareData
+from src.moveTextFiles import MoveTextFiles
+from src.prepare_data import PrepareData
 import pandas as pd
 import numpy as np
 
 
-def preprpcessData(df, data_path ,output_path):
+
+
+
+def preprpcessData(df, data_path ,
+                   output_path):
     df = pd.read_csv(df)    
-    process = PrepareData(train_df, data_path, output_path)
-    process.convert_to_yolo_format(train_df, data_path, output_path)
+    process = PrepareData(train_df,
+                          data_path, 
+                          output_path)
+    process.convert_to_yolo_format(train_df,
+                                   data_path, 
+                                   output_path)
 
 
 if __name__ == "__main__":
     
     
-    data_path =  "raw_data"
+    data_path =  "data/raw_data"
     train_data_path = data_path +  "/train"
     test_data_path = data_path + "/test"
     
@@ -26,8 +36,12 @@ if __name__ == "__main__":
     train_output_path = data_path + "/palmdata/train/images"
     test_output_path = data_path + "/palmdata/test/images"
     
-    train_preproces = preprpcessData(train_df, train_data_path, train_output_path)
-    test_preproces = preprpcessData(test_df, test_data_path, test_output_path) 
+    train_preproces = preprpcessData(train_df, 
+                                     train_data_path, 
+                                     train_output_path)
+    test_preproces = preprpcessData(test_df, 
+                                    test_data_path, 
+                                    test_output_path) 
     
     # Moving ..txt files to seperate folders
     
@@ -35,12 +49,14 @@ if __name__ == "__main__":
     
     source_folder = train_output_path
     destination_folder = data_path + "/palmdata/train/labels"
-    move_train_labels = MoveTextFiles(source_folder, destination_folder)
+    move_train_labels = MoveTextFiles(source_folder,
+                                      destination_folder)
     move_train_labels.move_txt_files()
     
     # For testing text files
     source_folder = test_output_path
     destination_folder = data_path + "/palmdata/test/labels"
-    move_test_labels = MoveTextFiles(source_folder, destination_folder)
+    move_test_labels = MoveTextFiles(source_folder, 
+                                     destination_folder)
     move_test_labels.move_txt_files()
     
