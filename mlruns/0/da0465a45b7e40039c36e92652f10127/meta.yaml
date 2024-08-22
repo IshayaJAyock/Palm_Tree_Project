@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jeremiah/Projects/Palm_Tree_Project/mlruns/0/da0465a45b7e40039c36e92652f10127/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: da0465a45b7e40039c36e92652f10127
+run_name: respected-ram-139
+run_uuid: da0465a45b7e40039c36e92652f10127
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1724325110932
+status: 1
+tags: []
+user_id: jeremiah

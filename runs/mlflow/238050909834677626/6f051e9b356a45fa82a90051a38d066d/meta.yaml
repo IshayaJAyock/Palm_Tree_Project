@@ -1,0 +1,15 @@
+artifact_uri: /Users/jeremiah/Projects/Palm_Tree_Project/runs/mlflow/238050909834677626/6f051e9b356a45fa82a90051a38d066d/artifacts
+end_time: 1724325860460
+entry_point_name: ''
+experiment_id: '238050909834677626'
+lifecycle_stage: active
+run_id: 6f051e9b356a45fa82a90051a38d066d
+run_name: train3
+run_uuid: 6f051e9b356a45fa82a90051a38d066d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1724325704837
+status: 3
+tags: []
+user_id: jeremiah

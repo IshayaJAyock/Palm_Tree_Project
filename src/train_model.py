@@ -10,7 +10,7 @@ class YOLOv8Model:
         self.model = YOLO('pre_train_models/yolov8n.pt') if model_path is None else YOLO(model_path)
 
     def fine_tune(self, data_path,  
-                  epochs=10, 
+                  epochs=2, 
                   imgsz=640, 
                   device="mps" 
                   ,augment=True):

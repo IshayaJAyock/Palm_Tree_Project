@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jeremiah/Projects/Palm_Tree_Project/mlruns/0/5ac22644dd0b42c48b5754f726003e8f/artifacts
+end_time: 1724324967560
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5ac22644dd0b42c48b5754f726003e8f
+run_name: capable-skunk-120
+run_uuid: 5ac22644dd0b42c48b5754f726003e8f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1724324967424
+status: 4
+tags: []
+user_id: jeremiah

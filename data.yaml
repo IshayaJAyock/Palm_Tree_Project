@@ -1,5 +1,5 @@
-train: /data/palmdata/train/images
-val: /data/palmdata/test/images
+train: ../palmdata/train/images
+val: ../palmdata/test/images
 
 nc: 2  # of classes
 names: ['Palm Tree','Others']  #class names 

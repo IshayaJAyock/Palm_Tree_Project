@@ -1,4 +1,6 @@
 import os
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import mlflow
 from src.train_model import YOLOv8Model
 
@@ -8,19 +10,13 @@ model_save_path = 'models/yolov8_finetuned.pt'
 # Initialize YOLOv8 model
 model = YOLOv8Model()
 
-# Start MLflow run
-with mlflow.start_run():
-    
-    # Finetuning the  model with custom data set
-    model.fine_tune(data_path=data_path,
-                    epochs=3, 
-                    imgsz=640, 
-                    device="mps", 
-                    augment=True)
-    
-    # Log the trained model to MLflow
-    mlflow.pytorch.log_model(model.model, 
-                             "yolov8_finetuned.pt")
-    
-    # Save the model locally
-    model.save_model(model_save_path)
+
+# Finetuning the  model with custom data set
+model.fine_tune(data_path=data_path,
+                epochs=100, 
+                imgsz=640, 
+                device="mps", 
+                augment=True)
+
+# Save the model locally
+model.save_model(model_save_path)

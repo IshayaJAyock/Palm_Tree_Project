@@ -2,10 +2,9 @@ import os
 import sys
 from pathlib import Path
 
+
+
 # ingest data from kaggle
-
-
-
 class IngestDataFromKaggle:
     
     def __init__(self, kaggle_username, 

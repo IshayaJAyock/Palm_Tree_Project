@@ -1,0 +1,20 @@
+# Ignore data directory and its contents
+data/
+
+# Ignore MLFlow artifacts
+ .mlflow/
+
+# Ignore DVC files
+.dvc/
+
+# Ignore YOLOv8 model files
+yolov8s.pt
+yolov8m.pt
+yolov8l.pt
+
+# Ignore other files
+*.ipynb
+*.log
+*.txt 
+*.png
+*.jpeg 
